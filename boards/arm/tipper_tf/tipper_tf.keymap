@@ -65,16 +65,6 @@
             key-positions = <13 16>;
             bindings = <&kp CAPS>;
         };
-		combo_f24 {
-            timeout-ms = <27>;
-            key-positions = <12 13>;
-            bindings = <&kp F24>;
-        };
-		combo_del2 {
-            timeout-ms = <27>;
-            key-positions = <22 23>;
-            bindings = <&kp DELETE>;
-        };
     };
 };
 
