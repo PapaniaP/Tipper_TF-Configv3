@@ -35,11 +35,11 @@ static struct zmk_widget_layer_status layer_status_widget;
 #endif
 */
 
-/*
+
 #if IS_ENABLED(CONFIG_ZMK_WIDGET_WPM_STATUS)
 static struct zmk_widget_wpm_status wpm_status_widget;
 #endif
-*/
+
 
 lv_style_t global_style;
 
@@ -81,13 +81,14 @@ lv_obj_t *zmk_display_status_screen() {
     lv_obj_align(custom_widget_profile_status_obj(&profile_status_widget), NULL, LV_ALIGN_IN_TOP_MID, 0, 0);
 #endif
 
-/*
+
     center_frame = lv_cont_create(screen, NULL);
     lv_obj_set_auto_realign(center_frame, true);
     lv_obj_align(center_frame, NULL, LV_ALIGN_CENTER, 0, 0);
     lv_cont_set_fit(center_frame, LV_FIT_TIGHT);
     lv_cont_set_layout(center_frame, LV_LAYOUT_CENTER);
-
+/*
+    
 #if IS_ENABLED(CONFIG_ZAPHOD_BONGO_CAT)
     zaphod_bongo_cat_widget_init(&bongo_widget, center_frame);
 #else
@@ -102,13 +103,13 @@ lv_obj_t *zmk_display_status_screen() {
     zmk_widget_layer_status_init(&layer_status_widget, screen);
     lv_obj_align(zmk_widget_layer_status_obj(&layer_status_widget), NULL, LV_ALIGN_IN_BOTTOM_LEFT,
                  0, 0);
-#endif
+#endif */
 
 #if IS_ENABLED(CONFIG_ZMK_WIDGET_WPM_STATUS)
     zmk_widget_wpm_status_init(&wpm_status_widget, screen);
     lv_obj_align(zmk_widget_wpm_status_obj(&wpm_status_widget), NULL, LV_ALIGN_IN_BOTTOM_RIGHT, -12, 0);
 #endif
-*/
+
     
     
     lv_obj_t * tipperlogo_icon;
